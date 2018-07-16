@@ -16,9 +16,9 @@ The road map I have set for this problem is as follows:
 -Develop a model of a non-linear single pendulum  
 -Compare the non-linear pendulum with the linear pendulum  <- there I am now 
 
--Research the kinematics of a double pendulum (LaGrange framework)
--Research the numerical methods to solve the system of ODEs (will likely use RK78, as suggested by a professor)
--Develop a MATLAB model of the double-pendulum and consider accuracy with various numerical solves
+-Research the kinematics of a double pendulum (LaGrange framework)  
+-Research the numerical methods to solve the system of ODEs (will likely use RK78, as suggested by a professor)  
+-Develop a MATLAB model of the double-pendulum and consider accuracy with various numerical solves  
 
 # Single-Non-Simplified-Pendulum
 I want to preface this by expressing the unexpected complexity of a single pendulum. 
