@@ -9,7 +9,7 @@ g = 9.81;
 l = 1;
 w = sqrt(g/l);
 
-span = 0:0.0001:50;
+span = 0:0.00001:50;
 initial = [pi/2 0];
 
 [t,theta] = ode45(@odePendulum,span,initial);
@@ -20,14 +20,16 @@ initial = [pi/2 0];
 subplot(2,1,1)
 plot(t,theta)%(:,1))
 
-energy = 1/2*m.*theta(:,2).^2 + m*g*l.*(1-cos(theta(:,1)));
+kinetic = 1/2*m.*(theta(:,2).*l).^2;
+potential = m*g*l.*(1-cos(theta(:,1)));
+energy = kinetic + potential;
 subplot(2,1,2)
 plot(t,energy)
 
 function thetaDot = odePendulum(t,theta)
     thetaDot = zeros(2,1);
     thetaDot(1) = theta(2);
-    thetaDot(2) = -sin(theta(1));
+    thetaDot(2) = -9.81*sin(theta(1));
 end
 
 
