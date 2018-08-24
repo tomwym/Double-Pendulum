@@ -2,7 +2,7 @@ clear; clc;
 
 % kinematic variables
 m1 = 1;         % mass 1
-m2 = 2;         % mass 2
+m2 = 1;         % mass 2
 l1 = 1;         % length of segment 1
 l2 = 0.75;       % length of segment 2
 g = 9.81;       % gravitational constant 
@@ -12,7 +12,7 @@ srad = 0.05;    % small radius
 lrad = 0.1;     % large radiss
 
 % numerical variables
-delta = 0.01;
+delta = 0.001;
 span = 0:delta:10;
 num_timesteps = max(size(span));
     % consider using length(span)
@@ -54,7 +54,9 @@ for i=1:num_timesteps
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%{
+Function definition prepares the odefunction for ODE45 function call
+%}
 function xdot = odePendulum(t,x,m1,m2,l1,l2,g)
 
     xdot = zeros(4,1);
@@ -75,6 +77,9 @@ function xdot = odePendulum(t,x,m1,m2,l1,l2,g)
     
 end
 
+%{
+function retrieves the positional information of the two points from theta1 and theta1
+%}
 function [x1,y1,x2,y2] = kinematics(theta1,theta2,l1,l2)
 
     x1 = l1*sin(theta1);        
