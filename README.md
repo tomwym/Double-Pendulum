@@ -12,8 +12,8 @@ I really like this quote.
 
 # Road Map
 The road map I have set for this problem is as follows:  
--Research the kinematic motion of a single pendulum  
--Develop a model of a simple/linear pendulum  
+[x] Research the kinematic motion of a single pendulum  
+[x] Develop a model of a simple/linear pendulum  
 -Research the numerical methods required to solve for the equation of a non-linear single pendulum (MATLAB's ODE45 should suffice)  
 -Develop a model of a non-linear single pendulum  
 -Compare the non-linear pendulum with the linear pendulum  
@@ -22,7 +22,7 @@ The road map I have set for this problem is as follows:
 -Research the kinematics of a double pendulum (LaGrange mechanics)  
 -Research the numerical methods to solve the system of ODEs (ODE45 to start)  
 -Develop a MATLAB model of the double-pendulum with ODE45  
--Conduct sensitivity study sweeping timestep, examining mechanical energy (may require some Hamiltonian mechanics) <-- currently here  
+-Conduct sensitivity study sweeping timestep, examining mechanical energy (may require some Hamiltonian mechanics) <-- CURRENTLY HERE  
 
 -Consider other numerical solvers such as RK78 \Numerical Methods\RK78.cpp (C++ may be required for faster calculations, open source solver code)  
 
